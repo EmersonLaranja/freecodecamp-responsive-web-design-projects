@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#container #navbar {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  border-right: 1px solid #cecece;
+}
+#container #navbar header {
+  text-align: center;
+}
+
+#container #navbar a {
+  padding: 16px 16px 16px 32px;
+  border-top: 1px solid #000;
+  transition: 400ms;
+  color: #2e2e2e;
+}
+#container #navbar a:hover {
+  background-color: #eeeeee;
+}
+
+header {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+#main-doc {
+  padding: 8px 48px 0;
+}
+#main-doc .main-section {
+  margin-top: 36px;
+}
+#main-doc .main-section:first-child {
+  margin-top: 0;
+}
+
+#main-doc .main-section code {
+  display: block;
+  background-color: #cecece;
+  text-align: center;
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+#main-doc .main-section p {
+  max-width: 90%;
+  font-weight: 300;
+  text-align: justify;
+}
+
+#main-doc .main-section ul span {
+  color: red;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 880px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  #container #navbar {
+    text-align: center;
+  }
+  #container #navbar a:last-child {
+    border-bottom: 1px solid #000;
+  }
+}
